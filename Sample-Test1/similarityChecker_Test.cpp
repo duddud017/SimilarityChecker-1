@@ -4,9 +4,9 @@
 using namespace std;
 
 class SimilarityCheckerFixture : public testing::Test {
+    SimilarityChecker checker;
 public:
     void checkScore(string str1, string str2, int expectedScroe) {
-        SimilarityChecker checker;
         int actualScore = checker.similarityCheck(str1, str2);
         EXPECT_EQ(expectedScroe, actualScore);
     }
